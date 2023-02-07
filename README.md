@@ -25,8 +25,6 @@ for await (const stacks of paginate((next) => cloudFormation.listStacks({ NextTo
 ```
 ## API
 
-### paginate((next: string) => asyncAWSSDKMETHOD({ next }), paginationKey: string)
+### paginate((next: string) => somePromise({ next }), paginationKey: string)
 
 returns an async generator that paginates through the aws-sdk list method returning all the responses.
-
-
