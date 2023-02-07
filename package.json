@@ -29,8 +29,5 @@
   "homepage": "https://github.com/Baselime/paginate-aws#readme",
   "devDependencies": {
     "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "@baselime/paginate-aws": "^1.0.2"
   }
 }
