@@ -1,7 +1,8 @@
 {
   "name": "@baselime/paginate-aws",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Typesafe AWS Pagination using async generators ",
+  "type": "commonjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -28,5 +29,8 @@
   "homepage": "https://github.com/Baselime/paginate-aws#readme",
   "devDependencies": {
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@baselime/paginate-aws": "^1.0.2"
   }
 }
