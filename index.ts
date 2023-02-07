@@ -1,4 +1,4 @@
-async function* paginate<T extends (next?:string) => Promise<any>, S extends string & keyof Awaited<ReturnType<T>>>(callback: T, paginationKey: S): AsyncGenerator<ReturnType<T>, void, void> {
+export async function* paginate<T extends (next?:string) => Promise<any>, S extends string & keyof Awaited<ReturnType<T>>>(callback: T, paginationKey: S): AsyncGenerator<ReturnType<T>, void, void> {
 	async function* makeRequest(Next?: string ) {
 		const response = await callback(Next);
 		yield response;
