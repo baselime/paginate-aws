@@ -16,7 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Setup
         uses: actions/setup-node@v2
         with:
@@ -24,7 +23,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Build and publish to npm registry
-        continue-on-error: true
         run: |
           npm ci
           npm publish --access public
