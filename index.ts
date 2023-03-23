@@ -3,7 +3,7 @@ export async function* paginate<T extends (next?:string) => Promise<any>, S exte
 		const response = await callback(Next);
 		yield response;
         
-		if (response && typeof response === 'object' && paginationKey in response && typeof paginationKey === 'string') {
+		if (response && typeof response === 'object' && paginationKey in response && typeof response[paginationKey] === 'string') {
 			yield* makeRequest(response[paginationKey]);
 		}
 	}
